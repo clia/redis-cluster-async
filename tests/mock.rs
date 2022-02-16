@@ -7,13 +7,13 @@ use {
     futures::future,
     once_cell::sync::Lazy,
     redis_cluster_async::{
-        redis::{
-            aio::ConnectionLike, cmd, parse_redis_value, IntoConnectionInfo, RedisFuture,
-            RedisResult, Value,
-        },
         Client, Connect,
     },
     tokio::runtime::Runtime,
+};
+use redis::{
+    aio::ConnectionLike, cmd, parse_redis_value, IntoConnectionInfo, RedisFuture,
+    RedisResult, Value,
 };
 
 type Handler = Arc<dyn Fn(&redis::Cmd, u16) -> Result<(), RedisResult<Value>> + Send + Sync>;

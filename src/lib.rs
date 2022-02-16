@@ -48,7 +48,7 @@
 //! }
 //! ```
 
-pub use redis;
+// pub use redis;
 
 use std::{
     collections::{BTreeMap, HashMap, HashSet},

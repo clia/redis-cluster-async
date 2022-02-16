@@ -14,12 +14,12 @@ use {
 };
 
 use redis_cluster_async::{
-    redis::{
-        aio::{ConnectionLike, MultiplexedConnection},
-        cmd, AsyncCommands, Cmd, IntoConnectionInfo, RedisError, RedisFuture, RedisResult, Script,
-        Value,
-    },
     Client, Connect,
+};
+use redis::{
+    aio::{ConnectionLike, MultiplexedConnection},
+    cmd, AsyncCommands, Cmd, IntoConnectionInfo, RedisError, RedisFuture, RedisResult, Script,
+    Value,
 };
 
 const REDIS_URL: &str = "redis://127.0.0.1:7000/";

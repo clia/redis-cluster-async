@@ -1,5 +1,7 @@
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) [![](http://meritbadge.herokuapp.com/redis_cluster_async)](https://crates.io/crates/redis_cluster_async)
 
+This fork not to reexport redis. Traits from redis will conflict.
+
 A Rust crate implementing a [Redis cluster](https://redis.io/topics/cluster-tutorial) client.
 
 Documentation is available at [here](https://docs.rs/redis_cluster_async/*/redis_cluster_async/).
